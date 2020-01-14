@@ -11,14 +11,23 @@ with open ('precipitation.json', encoding= 'utf8') as file:
 
 #step 2: Write a code to categorise the dates per month
 #limit data to only the first 
+
+
+
 months = [0]*12
 month_value = {}
+seattle = 'GHCND:US1WAKG0038'
+
 for observation in data:
-    date = observation['date'].split('-')
-    month = int(date[1]) -1
-    months[month] += observation['value']
+    if observation['station'] == seattle:
+            date = observation['date'].split('-')
+            month = int(date[1]) -1
+            months[month] += observation['value']
+
 print(months)
-print(f'In a year, the total amount of rain in Seattle is {sum(months)}')
+
+# print(months)
+# print(f'In a year, the total amount of rain in Seattle is {sum(months)}')
 
 
 #step 3: identify the values that are part of each month
