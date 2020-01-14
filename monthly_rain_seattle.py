@@ -15,14 +15,14 @@ months = []
 month_value = {}
 for observation in data:
     date = observation['date'].split('-')
-    observation['date'] = [date[0], date[1]]
-    #months.append(month)
-    # if month in data:
-    #     data[month] += int(data['value'])
-    # else:
-    #     data[month] - 
-#print(months)
+    observation['month'] = f'{date[0]} -{date[1]}'
+    # for month in data:
+    #     if month in month_value:
+    #         observation['date'] += observation['value']
 print(data)
+    #else:
+       # data['date'] = 
+#print(data)
 # for date in months:
     
 #     months.append(month)
