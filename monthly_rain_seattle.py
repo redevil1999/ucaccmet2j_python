@@ -11,15 +11,14 @@ with open ('precipitation.json', encoding= 'utf8') as file:
 
 #step 2: Write a code to categorise the dates per month
 #limit data to only the first 
-months = []
+months = [0]*12
 month_value = {}
 for observation in data:
     date = observation['date'].split('-')
-    observation['month'] = f'{date[0]} -{date[1]}'
-    # for month in data:
-    #     if month in month_value:
-    #         observation['date'] += observation['value']
-print(data)
+    month = int(date[1])
+    for month in range(12):
+        months[month] += observation['value']
+print(f'{month} : {months}')
     #else:
        # data['date'] = 
 #print(data)
