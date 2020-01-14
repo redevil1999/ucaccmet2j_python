@@ -10,7 +10,11 @@ with open ('precipitation.json', encoding= 'utf8') as file:
 #amount of rain is specified by value
 
 #step 2: Write a code to categorise the dates per month
-
+#limit data to only the first 
+months = []
+for observation in data:
+    months.append(observation['date'])
+print(months)
 
 
 #step 3: identify the values that are part of each month
