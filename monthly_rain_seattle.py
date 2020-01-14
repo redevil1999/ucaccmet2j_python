@@ -38,5 +38,5 @@ seattle_monthly_amount_and_percentage['Percentage per month'] = percentage_per_m
 
 print(seattle_monthly_amount_and_percentage)
 
-# with open('file_name.json', 'w' encoding=utf8) as file:
-#     json.dump(some_data, file)
+with open('monthly_rain_seattle.json', 'w', encoding='utf8') as file:
+     json.dump(seattle_monthly_amount_and_percentage, file)
