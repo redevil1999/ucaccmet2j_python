@@ -13,9 +13,15 @@ with open ('precipitation.json', encoding= 'utf8') as file:
 #limit data to only the first 
 months = []
 for observation in data:
-    months.append(observation['date'])
+    date = observation['date'].split('-')
+    month = [date[0], date[1]]
+    months.append(month)
 print(months)
 
+# for date in months:
+    
+#     months.append(month)
+# print(months)
 
 #step 3: identify the values that are part of each month
 
