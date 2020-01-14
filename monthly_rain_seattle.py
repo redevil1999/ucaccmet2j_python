@@ -15,17 +15,11 @@ months = [0]*12
 month_value = {}
 for observation in data:
     date = observation['date'].split('-')
-    month = int(date[1])
-    for month in range(12):
-        months[month] += observation['value']
-print(f'{month} : {months}')
-    #else:
-       # data['date'] = 
-#print(data)
-# for date in months:
-    
-#     months.append(month)
-# print(months)
+    month = int(date[1]) -1
+    months[month] += observation['value']
+print(months)
+print(f'In a year, the total amount of rain in Seattle is {sum(months)}')
+
 
 #step 3: identify the values that are part of each month
 
